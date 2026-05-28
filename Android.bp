@@ -1102,6 +1102,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsec-ril.so",
             ],
             shared_libs: [
+                "libprotobuf-cpp-full-21.7",
                 "liblog",
                 "libcutils",
                 "libril_sem",
@@ -1116,7 +1117,6 @@ cc_prebuilt_library_shared {
                 "libjsoncpp",
                 "libVendorSemTelephonyProps",
                 "libVendorSemDataProps",
-                "libprotobuf-cpp-full-21.7",
                 "libvkmanager_vendor",
                 "libengmode_client",
                 "libbase",
