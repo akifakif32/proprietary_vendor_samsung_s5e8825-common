@@ -425,7 +425,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcrypto-tm",
+    name: "libcryptx",
     owner: "samsung",
     strip: {
         none: true,
@@ -433,7 +433,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libcrypto-tm.so",
+                "proprietary/vendor/lib64/libcryptx.so",
             ],
             shared_libs: [
                 "libc",
@@ -1090,10 +1090,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libskeymint10device.so",
             ],
             shared_libs: [
-                "libshim_crypto",
                 "libbase_shim",
-                "android.hardware.security.rkp-V3-ndk",
-                "libcrypto-tm",
+                "android.hardware.security.rkp-V1-ndk",
+                "libcrypto-v33",
                 "liblog",
                 "libcutils",
                 "libutils",
@@ -1103,7 +1102,7 @@ cc_prebuilt_library_shared {
                 "libskeymint_cli",
                 "libsecril-client",
                 "vendor.samsung.hardware.keymint-V1-ndk_platform",
-                "android.hardware.security.keymint-V4-ndk",
+                "android.hardware.security.keymint-V1-ndk",
                 "android.hardware.security.sharedsecret-V1-ndk",
                 "android.hardware.security.secureclock-V1-ndk",
                 "libc++",
@@ -1130,9 +1129,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libskeymint_cli.so",
             ],
             shared_libs: [
-                "libshim_crypto",
                 "libbase_shim",
-                "android.hardware.security.rkp-V3-ndk",
+                "android.hardware.security.rkp-V1-ndk",
                 "liblog",
                 "libbase",
                 "libcutils",
@@ -1142,10 +1140,10 @@ cc_prebuilt_library_shared {
                 "libkeymaster4support",
                 "libkeymaster4_1support",
                 "libhidlbase",
-                "libcrypto-tm",
+                "libcrypto-v33",
                 "libbinder_ndk",
                 "libsecril-client",
-                "android.hardware.security.keymint-V4-ndk",
+                "android.hardware.security.keymint-V1-ndk",
                 "android.hardware.security.sharedsecret-V1-ndk",
                 "android.hardware.security.secureclock-V1-ndk",
                 "libteecl",
@@ -1681,35 +1679,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.samsung.hardware.keymint-V1-ndk_platform",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so",
-            ],
-            shared_libs: [
-                "libshim_crypto",
-                "libbase_shim",
-                "android.hardware.security.rkp-V3-ndk",
-                "libbinder_ndk",
-                "android.hardware.security.keymint-V4-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.samsung.hardware.radio-V1-ndk",
     owner: "samsung",
     strip: {
@@ -1961,26 +1930,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.security.keymint-service.samsung",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.security.keymint-service.samsung",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
 sh_binary {
     name: "gps",
     owner: "samsung",
@@ -2004,7 +1953,7 @@ cc_prebuilt_binary {
                 "libm",
                 "libandroid_net",
                 "libssl",
-                "libcrypto",
+                "libcryptx",
                 "libz",
                 "libdl",
                 "libc",

@@ -21,7 +21,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/s5e8825-common/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
     vendor/samsung/s5e8825-common/proprietary/vendor/etc/gnss/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
     vendor/samsung/s5e8825-common/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
-    vendor/samsung/s5e8825-common/proprietary/vendor/etc/init/android.hardware.security.keymint-service.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.samsung.rc \
     vendor/samsung/s5e8825-common/proprietary/vendor/etc/init/init.nfc.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nfc.samsung.rc \
     vendor/samsung/s5e8825-common/proprietary/vendor/etc/init/teegris_v4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_v4.rc \
     vendor/samsung/s5e8825-common/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc \
@@ -70,7 +69,7 @@ PRODUCT_PACKAGES += \
     lib_SoundAlive_SRC384_ver320 \
     lib_soundaliveresampler \
     libc++_shared \
-    libcrypto-tm \
+    libcryptx \
     libdpuhdr10p_8825 \
     libegis_fp_normal_sensor_test \
     libengmode_client \
@@ -113,7 +112,6 @@ PRODUCT_PACKAGES += \
     libswdap \
     vendor.samsung.hardware.gnss@2.0 \
     vendor.samsung.hardware.gnss@2.1 \
-    vendor.samsung.hardware.keymint-V1-ndk_platform \
     vendor.samsung.hardware.radio-V1-ndk \
     vendor.samsung.hardware.radio.bridge-V1-ndk \
     vendor.samsung.hardware.radio.channel-V1-ndk \
@@ -126,7 +124,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
     vendor.samsung.hardware.sehradio_manifest_2_34.xml \
     android.hardware.drm-service.widevine \
-    android.hardware.security.keymint-service.samsung \
     gps \
     gpsd \
     rild \
